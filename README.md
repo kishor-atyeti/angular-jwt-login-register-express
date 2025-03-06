@@ -1,14 +1,19 @@
-# Ng17JwtAuth
+# Register, Login with JWT Tutotial using Angular-Express
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+This is tutorial of Anguar + Express to achieve register the user, login using JWT and keep the session of user, authenticate using AuthGuard.
 
-## Development server
+## Technical requirements
+ - Angular 17.x.x
+ - Node v20.x.x
+ - MongoDB Compass 1.45.3
 
+## Development Information
+
+### Angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Node / Express
+Run `node run dev` for a `nodemon` dev server. Navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -17,11 +22,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

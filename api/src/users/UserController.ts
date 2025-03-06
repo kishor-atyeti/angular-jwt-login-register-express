@@ -4,6 +4,7 @@ import UserSchema from "./UserSchema";
 import bcrypt from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import config from "../config/config";
+import { AuthRequest } from "../middlewares/authenticate";
 
 /**
  * This method is used to register the user into the system.
@@ -78,6 +79,7 @@ const login = async (req: Request, res: Response, next: NextFunction)=>{
       data: { _id:user._id, email:user.email, name:user.name},
       token
     });
+    return;
   } catch (error) {
     res.status(500).json({error:"Something went wrong"});
     return;
@@ -91,7 +93,14 @@ const login = async (req: Request, res: Response, next: NextFunction)=>{
  * @param next
  */
 const me = async (req: Request, res: Response, next: NextFunction)=>{
-  res.json({message: 'my profile'});
+  const _request = req as AuthRequest;
+  const user = await UserSchema.findById(_request.userId);
+  if (user) {
+    res.status(200).json({
+      status: true,
+      data: { _id:user.id, email: user.email, name: user.name }
+    })
+  }
 };
 
 export {

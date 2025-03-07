@@ -69,6 +69,7 @@ const login = async (req: Request, res: Response, next: NextFunction)=>{
   const isPasswordMatch = await bcrypt.compare(password, user.password);
   if (!isPasswordMatch) {
     res.status(400).json({ error: "Incorrect credentials"});
+    return;
   }
 
   try {
@@ -99,7 +100,8 @@ const me = async (req: Request, res: Response, next: NextFunction)=>{
     res.status(200).json({
       status: true,
       data: { _id:user.id, email: user.email, name: user.name }
-    })
+    });
+    return;
   }
 };
 

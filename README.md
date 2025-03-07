@@ -15,10 +15,20 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ### Node / Express
 Run `node run dev` for a `nodemon` dev server. Navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
 
-## Build
+### Install dependencies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The below mentioned dependencies you need to install in the `/api` folder to support the express rest api's to be work with typescript.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ - `npm i -D typescript ts-node nodemon @types/node`
+ - `npm i express`
+ - `npm i -D @types/express`
+ - `npm i mongoose`
+ - `npm i -D @types/mongoose`
+ - `npm i dotenv`
+ - `npm i -D @types/dotenv`
+ - `npm i bcrypt`
+ - `npm i -D @types/bcrypt`
+ - `npm i jsonwebtoken`
+ - `npm i -D @types/jsonwebtoken`
+ - `npm i cors`
+ - `npm i -D @types/cors`

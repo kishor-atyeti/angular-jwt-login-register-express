@@ -13,7 +13,7 @@ This is tutorial of Anguar + Express to achieve register the user, login using J
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ### Node / Express
-Run `node run dev` for a `nodemon` dev server. Navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
+Run `npm run dev` for a `nodemon` dev server. Navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
 
 ### Install dependencies
 

@@ -13,9 +13,11 @@ This is tutorial of Anguar + Express to achieve register the user, login using J
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ### Node / Express
-Navigate to `/api` folder and run `npm run dev` for a `nodemon` dev server. Navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
+Navigate to `/api` folder and run `npm run dev` for a `nodemon` dev server. In browser, navigate to `http://localhost:4402`. The application will automatically reload if you change any of the source files.
 
-### Install dependencies
+Please import the postman collection (`Login-Register-Angular-Express.postman_collection.json`) in Postman to test the Rest API's.
+
+### Installed dependencies
 
 The below mentioned dependencies you need to install in the `/api` folder to support the express rest api's to be work with typescript.
 

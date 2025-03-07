@@ -11,6 +11,7 @@ export interface RegisterPayload {
 
 export interface User {
   email: string;
+  name: string;
 }
 
 export interface ApiResponse<T> {

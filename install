@@ -1,5 +1,6 @@
 /**
- * Installed packages
+ * Installed packages:
+ *
  * npm i -D typescript ts-node nodemon @types/node
  * npm i express
  * npm i -D @types/express
@@ -11,4 +12,6 @@
  * npm i -D @types/bcrypt
  * npm i jsonwebtoken
  * npm i -D @types/jsonwebtoken
+ * npm i cors
+ * npm i -D @types/cors
  */

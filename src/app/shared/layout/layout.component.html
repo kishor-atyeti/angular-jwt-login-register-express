@@ -6,9 +6,12 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" routerLink="dashboard" routerLinkActive="active">Dashboard</a>
-        <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
-        <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
+        @if (isLoggedIn) {
+          <a class="nav-link" routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+        } @else {
+          <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+          <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
+        }
       </div>
     </div>
   </div>

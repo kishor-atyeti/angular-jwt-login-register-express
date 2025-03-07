@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../core/services/auth.service';
+import { response } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +14,8 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 export class LoginComponent {
 
   form: FormGroup;
+  authService = inject(AuthService);
+  router = inject(Router);
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -21,7 +26,13 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.form.valid) {
-
+      // console.log(this.form.value);
+      this.authService.login(this.form.value).subscribe({
+        next: (response)=> {
+          // console.log(response);
+          this.router.navigate(['']); // route to default route.
+        }
+      });
     }
   }
 }

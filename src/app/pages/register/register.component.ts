@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +11,9 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+
+  router = inject(Router);
+  authService = inject(AuthService);
 
   form: FormGroup;
 
@@ -22,7 +27,11 @@ export class RegisterComponent {
 
     onSubmit() {
       if (this.form.valid) {
-
+        this.authService.register(this.form.value).subscribe({
+          next: (response) => {
+            this.router.navigate(['login']);
+          }
+        });
       }
     }
 
